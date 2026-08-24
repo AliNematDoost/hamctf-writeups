@@ -28,7 +28,7 @@ your-username/
 └── extract.sh     # runs all PoCs, prints every flag
 ```
 
-See [example-name](./exmaple-name/WRITEUP.md) for a starting point.
+See [example-name](./example-name/WRITEUP.md) for a starting point.
 
 ## Conventions
 
