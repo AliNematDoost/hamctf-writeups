@@ -1,6 +1,6 @@
 # Vulnerability
 
-Image layers are additive and imutable, meaning each Dockerfile instruction creates a new layer containing the changes made relative to the previous layer. Files and commands executed in one layer will independently be extractable from that layer. 
+Image layers are additive and immutable, meaning each Dockerfile instruction creates a new layer containing the changes made relative to the previous layer. Files and commands executed in one layer will independently be extractable from that layer.
 
 In this case, in one layer an env file is copied into image and in a later image it gets removed using rm command. But this does not mean env is totaly removed and there would be no sign of it. rm command just makes env hidden in the final layer of image but in layers behind rm command, we can still find contents of env file.
 
